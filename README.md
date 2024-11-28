@@ -1,58 +1,10 @@
 # ragsearch
-This project aims to build a Recommendation Engine leveraging an Agentic Retrieval-Augmented Generation (RAG) architecture to provide context-aware recommendations based on user queries. The MVP focuses on modularity and scalability while utilizing open-source technologies for cost efficiency.
+This project aims to build a Recommendation Engine leveraging an Retrieval-Augmented Generation (RAG) architecture to provide context-aware recommendations based on user Natural-Language-Query queries.
 
-## Project Structure
-Proposed Codebase Structure:
+# FAQ
 
-```plaintext
-ragsearch/
-├── __init__.py
-├── retrieval/
-│   ├── __init__.py
-│   ├── structured.py     # For databases (e.g., DuckDB,sqlLite,MongoDB)
-│   ├── unstructured.py   # For document loaders (e.g., PDF, Word, HTML)
-│   ├── base.py           # Abstract base class
-├── generation/
-│   ├── __init__.py
-│   ├── langchain.py      # LangChain-based generation
-│   ├── llamaindex.py     # LlamaIndex-based generation
-│   ├── base.py           # Abstract base class
-├── fusion/
-│   ├── __init__.py
-│   ├── simple_fusion.py  # Simple query-context fusion
-│   ├── attention.py      # Advanced fusion strategies
-│   ├── base.py           # Abstract base class
-├── reranking/
-│   ├── __init__.py       # Factory for reranking components
-│   ├── bm25_reranker.py  # Reranking based on BM25 scores
-│   ├── neural_reranker.py # Reranking with neural models
-│   ├── base.py           # Abstract base class
-├── llms/
-│   ├── __init__.py       # Factory for LLMs
-│   ├── openai.py         # OpenAI wrapper
-│   ├── cohere.py         # Cohere wrapper
-│   ├── huggingface.py    # HuggingFace wrapper
-│   ├── base.py           # Abstract base class
-├── utils/
-│   ├── __init__.py
-│   ├── logger.py         # Logging utilities
-│   ├── config.py         # Configuration utilities
-│   ├── data.py           # Data utilities
-│   ├── metrics.py        # Evaluation metrics
-├── tests/
-│   ├── __init__.py
-│   ├── test_retrieval.py
-│   ├── test_generation.py
-│   ├── test_fusion.py
-│   ├── test_reranking.py
-│   ├── test_llms.py
-├── main.py               # Main entry point
-├── config.yaml           # Configuration file
-├── README.md             # Project documentation
-├── RAG.md                # Documentation for Retrieval-Augmented Generation
-├── RAG-FAQ.md            # FAQ for Retrieval-Augmented Generation
-```
-
+## What is a Large Language Model (LLM)?
+A Large Language Model (LLM) is a type of artificial intelligence (AI) model that uses deep learning techniques to generate human-like text. LLMs are trained on vast amounts of text data to learn the patterns and structures of human language. They can generate text in response to a prompt, complete sentences, and even write entire articles or stories. LLMs are used in a wide range of applications, including chatbots, language translation, and content generation.
 
 ## What is Retrieval-Augmented Generation?
 Retrieval-Augmented Generation (RAG) is the process of optimizing the output of a large language model, so it references an authoritative knowledge base outside of its training data sources before generating a response. Large Language Models (LLMs) are trained on vast volumes of data and use billions of parameters to generate original output for tasks like answering questions, translating languages, and completing sentences. RAG extends the already powerful capabilities of LLMs to specific domains or an organization's internal knowledge base, all without the need to retrain the model. It is a cost-effective approach to improving LLM output so it remains relevant, accurate, and useful in various contexts.
@@ -61,7 +13,6 @@ Retrieval-Augmented Generation (RAG) is the process of optimizing the output of 
 LLMs are a key artificial intelligence (AI) technology powering intelligent chatbots and other natural language processing (NLP) applications. The goal is to create bots that can answer user questions in various contexts by cross-referencing authoritative knowledge sources. Unfortunately, the nature of LLM technology introduces unpredictability in LLM responses. Additionally, LLM training data is static and introduces a cut-off date on the knowledge it has.
 
 ## Known challenges of LLMs include:
-
 Presenting false information when it does not have the answer.
 Presenting out-of-date or generic information when the user expects a specific, current response.
 Creating a response from non-authoritative sources.
