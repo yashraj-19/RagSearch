@@ -1,4 +1,4 @@
-# ragsearch
+# RagSearch
 
 `RagSearch` is a Python library designed for building a Retrieval-Augmented Generation (RAG) application that enables natural language querying over structured data. This tool leverages embedding models and a vector database (FAISS or ChromaDB) to provide an efficient and scalable search engine.
 
